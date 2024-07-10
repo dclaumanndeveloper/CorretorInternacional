@@ -1,0 +1,6 @@
+@CorretorInternacional.Api_HostAddress = http://localhost:5133
+
+GET {{CorretorInternacional.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

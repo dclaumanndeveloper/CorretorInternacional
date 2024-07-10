@@ -1,0 +1,65 @@
+﻿@page
+@model CorretorInternacional.Web.Pages.Imoveis.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Imovel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Imovel.Name" class="control-label"></label>
+                <input asp-for="Imovel.Name" class="form-control" />
+                <span asp-validation-for="Imovel.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imovel.Price" class="control-label"></label>
+                <input asp-for="Imovel.Price" class="form-control" />
+                <span asp-validation-for="Imovel.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imovel.AdressId" class="control-label"></label>
+                <input asp-for="Imovel.AdressId" class="form-control" />
+                <span asp-validation-for="Imovel.AdressId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imovel.Id" class="control-label"></label>
+                <input asp-for="Imovel.Id" class="form-control" />
+                <span asp-validation-for="Imovel.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imovel.CreatedAt" class="control-label"></label>
+                <input asp-for="Imovel.CreatedAt" class="form-control" />
+                <span asp-validation-for="Imovel.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imovel.UpdatedAt" class="control-label"></label>
+                <input asp-for="Imovel.UpdatedAt" class="form-control" />
+                <span asp-validation-for="Imovel.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Imovel.Active" /> @Html.DisplayNameFor(model => model.Imovel.Active)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
